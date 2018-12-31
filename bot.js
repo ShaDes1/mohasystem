@@ -27,6 +27,11 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
 
 
 
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name"," Member "));
+    });
+
+
 
 
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
