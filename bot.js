@@ -26,33 +26,4 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
 
 
 
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'obx');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return; 
-    let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField('🎽 | name :  ',${member})
-        .addField('📢 | Wellllcoome To _OBx Shop__ 💞 💝', Welcome to the server ${member})
-        .addField('User ID :', "[" + ${member.id} + "]" )
-                .addField('arrow_down',** Your Number ${member.guild.memberCount}**)
-
-                  .addField("Name:",**<@${member.id}>**, true)
-
-                                     .addField(' Server', ${member.guild.name},true)
-
-     .setFooter('OBX Shop')
-        .setTimestamp()
-
-      channel.sendEmbed(embed);
-}); 
- 
-
-
-
-
-
-
-
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
