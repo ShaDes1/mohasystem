@@ -5,25 +5,23 @@ var prefix = "$";
 
 
 
-
+var prefix = "l";
     client.on('message', message => {
-        var prefix = "A";
-        if (message.author.bot) return;
-        if (!message.content.startsWith(prefix)) return;
-      
-        let command = message.content.split(" ")[0];
-        command = command.slice(prefix.length);
-      
-      
-      let args = message.content.split(" ").slice(1);
-      let x = args.join(" ")
-        if(message.content.startsWith(prefix + 'S')) {
-            message.channel.send(''+b);
-                message.delete(999)
-        }
-        
-       
-      });
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+  if (command == "i") {
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('by lina');
+
+   message.channel.sendMessage(args.join("  "))
+   message.delete()
+  }
+ });
 
 
 
