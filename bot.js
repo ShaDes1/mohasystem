@@ -5,7 +5,7 @@ var prefix = "$";
 
 
 
-var prefix = "l";
+var prefix = "A";
     client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -15,7 +15,7 @@ var prefix = "l";
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "i") {
+  if (command == "S") {
 if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('by lina');
 
    message.channel.sendMessage(args.join("  "))
