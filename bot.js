@@ -5,7 +5,7 @@ var prefix = "$";
 
 
 
-var prefix = "A";
+var prefix = "a";
     client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -15,13 +15,32 @@ var prefix = "A";
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "S") {
+  if (command == "s") {
 if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('by lina');
 
    message.channel.sendMessage(args.join("  "))
    message.delete()
   }
  });
+
+
+
+
+
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.get("529241607573340170").setName("[");
+client.channels.get("529241607573340170").setName("[ Wel");
+client.channels.get("529241607573340170").setName("[ Welcome");
+client.channels.get("529241607573340170").setName("[ Welcome To");
+client.channels.get("529241607573340170").setName("[ Welcome To OB");
+client.channels.get("529241607573340170").setName("[ Welcome To OBx");
+client.channels.get("529241607573340170").setName("[ Welcome To OBx Sh");
+client.channels.get("529241607573340170").setName("[ Welcome To OBx Shop");
+client.channels.get("529241607573340170").setName("[ Welcome To OBx Shop ]");
+  }, 3000);
+});
+
 
 
 
